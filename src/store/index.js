@@ -5,6 +5,7 @@ Vue.use(Vuex)
 
 export default new Vuex.Store({
   state: {
+    editPost:null,
     sampleBlogCards: [{
       blogTitle: 'Blog Card #1',
       blogCoverPhoto: 'stock-1',
@@ -28,6 +29,9 @@ export default new Vuex.Store({
   ]
   },
   mutations: {
+    toggleEditPost(state, payload){
+      state.editPost = payload
+    }
   },
   actions: {
   },
