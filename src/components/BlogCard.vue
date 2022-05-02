@@ -23,14 +23,19 @@ import Edit from '../assets/Icons/edit-regular.svg'
 import Delete from '../assets/Icons/trash-regular.svg'
 
 export default {
-        name: "BlogCard",
-        props:['post'],
-        components: {
-            Arrow,
-            Edit,
-            Delete
-        }
+    name: "BlogCard",
+    props:['post'],
+    components: {
+      Arrow,
+      Edit,
+      Delete
+    },
+    computed:{
+      editPost(){
+        return this.$store.state.editPost
+      }
     }
+  }
 </script>
 
 <style lang="scss" scoped>
