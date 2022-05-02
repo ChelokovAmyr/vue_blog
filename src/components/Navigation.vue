@@ -8,8 +8,8 @@
             </div>
             <div class="nav-links">
                 <ul v-show="!mobile">
-                    <router-link class="link" to="#">Home</router-link>
-                    <router-link class="link" to="blogs">Blogs</router-link>
+                    <router-link class="link" to="/">Home</router-link>
+                    <router-link class="link" to="/blogs">Blogs</router-link>
                     <router-link class="link" to="#">Create Post</router-link>
                     <router-link class="link" to="#">Login/Registration</router-link>
                 </ul>
@@ -18,8 +18,8 @@
         <menuIcon @click="toggleMobileNav" class="menu-icon" v-show="mobile"/>
         <transition name="mobile-nav">
             <ul class="mobile-nav" v-show="mobileNav">
-                <router-link class="link" to="#">Home</router-link>
-                <router-link class="link" to="#">Blogs</router-link>
+                <router-link class="link" to="/">Home</router-link>
+                <router-link class="link" to="/blogs">Blogs</router-link>
                 <router-link class="link" to="#">Create Post</router-link>
                 <router-link class="link" to="#">Login/Registration</router-link>
             </ul>
@@ -27,7 +27,7 @@
     </header>
 </template>
 
-<script>    
+<script>
 import menuIcon from '../assets/Icons/bars-regular.svg'
 
     export default {
@@ -55,7 +55,7 @@ import menuIcon from '../assets/Icons/bars-regular.svg'
                 }
                 this.mobile = false
                 this.mobileNav = false
-                return 
+                return
             },
             toggleMobileNav(){
                 this.mobileNav = !this.mobileNav
@@ -131,7 +131,7 @@ import menuIcon from '../assets/Icons/bars-regular.svg'
         display: flex;
         flex-direction: column;
         position: fixed;
-        height: 100%;   
+        height: 100%;
         background-color: #303030;
         top:0;
         left:0;
@@ -145,13 +145,13 @@ import menuIcon from '../assets/Icons/bars-regular.svg'
      .mobile-nav-leave-active{
          transition: all 1s ease;
      }
-     
+
      .mobile-nav-enter{
          transform: translate(-250px);
      }
      .mobile-nav-enter-to{
          transform: translateX(0);
-     }  
+     }
      .mobile-nav-leave-to{
          transform: translateX(-250px)
      }

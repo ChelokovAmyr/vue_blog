@@ -23,7 +23,7 @@ import Edit from '../assets/Icons/edit-regular.svg'
 import Delete from '../assets/Icons/trash-regular.svg'
 
 export default {
-        name: "BlogCards",
+        name: "BlogCard",
         props:['post'],
         components: {
             Arrow,
