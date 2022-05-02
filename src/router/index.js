@@ -2,6 +2,9 @@ import Vue from "vue";
 import VueRouter from "vue-router";
 import Home from "../views/Home.vue";
 import Blogs from "../views/Blogs.vue";
+import ForgotPassword from "@/views/ForgotPassword";
+import Register from "@/views/Register";
+import Login from "@/views/Login";
 
 Vue.use(VueRouter);
 
@@ -22,6 +25,30 @@ const routes = [
       title:'Blogs'
     }
   },
+  {
+    path: "/login",
+    name: "Login",
+    component: Login,
+    meta:{
+      title:'Login'
+    }
+  },
+  {
+    path: "/Register",
+    name: "Register",
+    component: Register,
+    meta:{
+      title:'Register'
+    }
+  },
+  {
+    path: "/ForgotPassword",
+    name: "ForgotPassword",
+    component: ForgotPassword,
+    meta:{
+      title:'ForgotPassword'
+    }
+  },
 ];
 
 const router = new VueRouter({
@@ -29,5 +56,10 @@ const router = new VueRouter({
   base: process.env.BASE_URL,
   routes,
 });
+
+router.beforeEach((to, from, next)=> {
+  document.title = `${to.meta.title} | FireBlog`
+  next()
+})
 
 export default router;
