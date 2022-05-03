@@ -2,14 +2,14 @@ import firebase from 'firebase/app'
 import 'firebase/firestore'
 
 const firebaseConfig = {
-    apiKey: "AIzaSyBmk5DnBjYmh7xR7cehEWFQyCU_CoOfImI",
-    authDomain: "vuefirebaseapp-8dd90.firebaseapp.com",
-    projectId: "vuefirebaseapp-8dd90",
-    storageBucket: "vuefirebaseapp-8dd90.appspot.com",
-    messagingSenderId: "614065853259",
-    appId: "1:614065853259:web:13dea3c1671ae71eb50ece",
-    measurementId: "G-L8ZZ1YC703"
-  };
+    apiKey: "AIzaSyBHOyDNZKR7ChxBa8B_8CxARiSnuWC4zx8",
+    authDomain: "vuefireblog-d58e5.firebaseapp.com",
+    projectId: "vuefireblog-d58e5",
+    storageBucket: "vuefireblog-d58e5.appspot.com",
+    messagingSenderId: "213502731000",
+    appId: "1:213502731000:web:f20005fd382795aa71d10d",
+    measurementId: "G-EL46P4DDQQ"
+};
 
   const firebaseApp = firebase.initializeApp(firebaseConfig)
   const timestamp = firebase.firestore.FieldValue.serverTimestamp
@@ -17,4 +17,3 @@ const firebaseConfig = {
   export {timestamp}
   export default firebaseApp.firestore()
 
-  
