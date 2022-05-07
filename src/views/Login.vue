@@ -15,7 +15,7 @@
           <input type="password" placeholder="Password" v-model="password" />
           <password class="icon" />
         </div>
-        <div v-show="error" class="error">{{ this.errorMsg }}</div>
+        <div v-show="error" :class="[error,errorMsgColor]">{{ this.errorMsg }}</div>
       </div>
       <router-link class="forgot-password" :to="{ name: 'ForgotPassword' }"
       >Forgot your password?</router-link
@@ -44,6 +44,7 @@ export default {
       password: "",
       error: null,
       errorMsg: "",
+      errorMsgColor:'red-msg'
     };
   },
   methods: {
@@ -67,6 +68,9 @@ export default {
 </script>
 
 <style lang="scss">
+.red-msg{
+  color: red;
+}
 .form-wrap {
   overflow: hidden;
   display: flex;
